@@ -1,0 +1,18 @@
+// home styles
+
+.section-home {
+    max-width: 1015px;
+    margin: 100px auto 120px;
+    // @media (max-width: $breakpoint-big-tablet) {
+    //     margin: 100px 40px;
+    // }
+    // @media (max-width: $breakpoint-phone) {
+    //     margin: 60px 20px;
+    // } 
+}
+.section-pending {
+    background-color: $color-pending-background; 
+    min-height: 416px;
+}
+
+

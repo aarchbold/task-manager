@@ -1,0 +1,36 @@
+// forms styles
+
+input {
+    // background-color: $color-main-font;
+    // color: $color-form-input;
+    border: 0;
+    font-size: 16px;
+    padding: 14px;
+    border-radius: 3px;
+    &:focus {
+        // outline-color: $color-form-highlight;
+    }
+}
+
+// buttons
+.button {
+    transition: all 0.250s;
+    border: 2px solid $color-button;
+    background-color: $color-button-background;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px 30px;
+    text-decoration: none;
+    color: $color-button;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin: 0 10px;
+    &:hover {
+        background-color: $color-button-hover;
+        // color: $color-button;
+    }
+    &:focus {
+        // outline-color: $color-form-highlight;
+    }
+}

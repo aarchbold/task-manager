@@ -1,0 +1,249 @@
+/* Eric Meyer's CSS Reset
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   This is a Sass partial
+*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * http://applemusic.tumblr.com/
+ * https://jsfiddle.net/xq56dmrh/
+ */
+/** Ultra Light */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+/** Thin */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 200;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+/** Regular */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+/** Medium */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+/** Semi Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 600;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+/** Bold */
+@font-face {
+  font-family: "San Francisco Bold";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+h1 {
+  font-size: 18px;
+  font-family: "San Francisco Bold";
+  color: white;
+  line-height: 1.2;
+}
+
+p {
+  color: #000000;
+  line-height: 1.4;
+  margin-bottom: 40px;
+}
+p a {
+  color: #5c6369;
+}
+p.hero__copy {
+  color: white;
+  margin: 0;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  margin-bottom: 40px;
+  color: #5c6369;
+  list-style: circle;
+  padding-left: 30px;
+  line-height: 1.4;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: white;
+  color: #000000;
+  font-family: "San Francisco", "Arial", "San-Serif";
+  font-size: 16px;
+  height: 100%;
+}
+
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -66px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+  height: 66px;
+}
+
+.hero-content {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 54px 20px 0;
+}
+
+.hero__task-details {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.hero__task-from {
+  opacity: 0.7;
+}
+
+.main-footer {
+  position: relative;
+  width: 100%;
+  background-color: #EFEFEF;
+  height: 66px;
+}
+.main-footer .main-footer__container {
+  position: relative;
+  text-align: center;
+  padding: 25px;
+}
+
+.main-navigation {
+  height: 66px;
+}
+
+.main-navigation__container {
+  padding: 20px;
+}
+
+.main-navigation__logo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.main-navigation__header {
+  text-align: center;
+  padding: 6px 130px;
+}
+
+.main-navigation__button {
+  transition: all 0.25s;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.main-navigation__button:hover {
+  right: 21px;
+  top: 21px;
+}
+
+.section-home {
+  max-width: 1015px;
+  margin: 100px auto 120px;
+}
+
+.section-pending {
+  background-color: #FF5E5B;
+  min-height: 416px;
+}
+
+input {
+  border: 0;
+  font-size: 16px;
+  padding: 14px;
+  border-radius: 3px;
+}
+
+.button {
+  transition: all 0.250s;
+  border: 2px solid #000000;
+  background-color: #EFEFEF;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 30px;
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+.button:hover {
+  background-color: white;
+}

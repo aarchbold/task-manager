@@ -1,0 +1,15 @@
+// footer styles
+
+.main-footer {
+    //position: fixed;
+    //bottom: 0;
+    position: relative;
+    width: 100%;
+    background-color: $color-footer-background;
+    height: 66px;
+    .main-footer__container {
+        position: relative;
+        text-align: center;
+        padding: 25px;
+    }
+}
