@@ -137,27 +137,35 @@ html {
 }
 
 body {
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
   background-color: white;
   color: #000000;
   font-family: "San Francisco", "Arial", "San-Serif";
   font-size: 16px;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .page-wrap {
-  min-height: 100%;
-  margin-bottom: -66px;
-}
-.page-wrap:after {
-  content: "";
-  display: block;
-  height: 66px;
+  padding-bottom: 100px;
+  overflow: auto;
 }
 
 .hero-content {
   max-width: 500px;
   margin: 0 auto;
   padding: 54px 20px 0;
+}
+
+.body-content {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 54px 20px 0;
+}
+
+.body-content_bullet {
+  margin-bottom: 20px;
 }
 
 .hero__task-details {
@@ -172,7 +180,8 @@ body {
 }
 
 .main-footer {
-  position: relative;
+  position: fixed;
+  bottom: 0;
   width: 100%;
   background-color: #EFEFEF;
   height: 66px;
@@ -246,4 +255,33 @@ input {
 }
 .button:hover {
   background-color: white;
+}
+
+.page-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0.8;
+}
+
+.page-slider {
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 370px;
+  background-color: white;
+  z-index: 21;
+  right: -370px;
+}
+.page-slider.-is-open {
+  -webkit-transform: translateX(-370px);
+  -ms-transform: translateX(-370px);
+  transform: translateX(-370px);
 }

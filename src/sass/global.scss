@@ -5,21 +5,20 @@ html {
 }
 
 body {
+    transition: transform 0.25s;
     background-color: $color-background;
     color: $color-body-font;
     font-family: "San Francisco", "Arial", "San-Serif";
     font-size: 16px;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .page-wrap {
-    min-height: 100%;
-    margin-bottom: -66px;
-    &:after {
-        content: "";
-        display: block;
-        height: 66px;
-    }
+    // min-height: 100%;
+    // margin-bottom: -66px;
+    padding-bottom: 100px;
+    overflow: auto;
 }
 
 .hero-content {
@@ -29,7 +28,12 @@ body {
 }
 
 .body-content {
-
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 54px 20px 0;
+}
+.body-content_bullet {
+    margin-bottom: 20px;
 }
 
 // start hero styles
