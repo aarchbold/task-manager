@@ -17,29 +17,47 @@
         <script src="static/js/vendor/vendors.js"></script>
         <script src="https://use.fontawesome.com/677ce2c38f.js"></script>
     </head>
-    <body id="home-page">
+    <body id="pending-page">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="page-overlay">
         </div>
         <div class="page-slider -is-open">
-            <div class="page-slider_header">
-                <img src="static/images/ui/slider-enter-pin.png" width="370" />
-                <div class="page-slider_content">
-                    <h2 class="page-slider_heading">Huuzzaaaa!</h2>
-                    <p class="page-slider_subheading ">You've been sent a new task!! enter the 4 digit pin to unlock the task.</p>
-                    <div class="page-slider_form">
-                        <input class="page-slider_input" type="number" placeholder="Enter PIN Here" />
-                        <button class="button button--pin button--block" type="button">Submit PIN</button>
+            <div class="page-slider--pin">
+                <div class="page-slider_header">
+                    <img src="static/images/ui/slider-enter-pin.png" width="370" />
+                    <div class="page-slider_content">
+                        <h2 class="page-slider_heading">Huuzzaaaa!</h2>
+                        <p class="page-slider_subheading ">You've been sent a new task!! enter the 4 digit pin to unlock the task.</p>
+                        <div class="page-slider_form" id="pin-entry">
+                            <input class="page-slider_input pin-input" type="number" placeholder="Enter PIN Here" max="9999" />
+                            <button id="pinSubmit" class="button button--pin button--block" type="button">Submit PIN</button>
+                        </div>
+                        <div class="page-slider_instructions">The pin shoud be in the message that was sent to you</div>
                     </div>
-                    <div class="page-slider_instructions">The pin shoud be in the message that was sent to you</div>
+                    <div class="page-slider_footer">
+                        <p class="page-slider_footer--text">We have an iPhone app too if you want to unlock the best way to get work done for free.</p>
+                        <a href="#"><img class="page-slider__button" src="static/images/logos/logo-appstore.png" title="Download on the App Store" width="110" /></a>
+                    </div>
                 </div>
-                <div class="page-slider_footer">
-                    <p class="page-slider_footer--text">We have an iPhone app too if you want to unlock the best way to get work done for free.</p>
-                    <a href="#"><img class="page-slider__button" src="static/images/logos/logo-appstore.png" title="Download on the App Store" width="110" /></a>
+            </div>
+            <div class="page-slider--accepted">
+                <div class="page-slider_header">
+                    <img src="static/images/ui/slider-accepted.png" width="370" />
+                    <div class="page-slider_content">
+                        <h2 class="page-slider_heading">Favorite this page!</h2>
+                        <p class="page-slider_subheading ">Add this page as a favorite so you can easily find it when you need to reference or check off completed tasks. (You can also give updates any time too)</p>
+                        <a href="#" id="taskAccepted" class="button button--pin button--block">Thanks, close this now</a>
+                    </div>
+                    <div class="page-slider_footer">
+                        <p class="page-slider_footer--text">We have an iPhone app too if you want to unlock the best way to get work done for free.</p>
+                        <a href="#"><img class="page-slider__button" src="static/images/logos/logo-appstore.png" title="Download on the App Store" width="110" /></a>
+                    </div>
                 </div>
-            </div> 
+            </div>
+            <div class="page-slider--progress">
+            </div>
         </div>
         <div class="page-wrap">
             <section class="section-pending">
@@ -69,7 +87,7 @@
 
         <footer class="main-footer" data-role="footer" data-position="fixed">
             <div class="main-footer__container">
-                <a class="button" href="#">Decline</a> <a class="button" href="#">Accept</a>
+                <a id="declineTask" class="button" href="#">Decline</a> <a id="acceptTask" class="button" href="#">Accept</a>
             </div>
         </footer>
 

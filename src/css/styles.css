@@ -266,6 +266,7 @@ button:hover, .button:hover {
 .button--block {
   display: block;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .button--pin {
@@ -348,4 +349,8 @@ button:hover, .button:hover {
 .page-slider_footer--text {
   margin-bottom: 20px;
   text-align: left;
+}
+
+.page-slider--accepted {
+  display: none;
 }
