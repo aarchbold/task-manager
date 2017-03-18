@@ -4,16 +4,21 @@ input {
     // background-color: $color-main-font;
     // color: $color-form-input;
     border: 0;
-    font-size: 16px;
-    padding: 14px;
+    font-size: 14px;
+    padding: 10px;
     border-radius: 3px;
+    border: 1px solid $color-input;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing : border-box;
+    margin-bottom: 10px;
     &:focus {
         // outline-color: $color-form-highlight;
     }
 }
 
 // buttons
-.button {
+button, .button {
     transition: all 0.250s;
     border: 2px solid $color-button;
     background-color: $color-button-background;
@@ -32,5 +37,24 @@ input {
     }
     &:focus {
         // outline-color: $color-form-highlight;
+    }
+}
+
+.button--block {
+    display: block;
+    width: 100%;
+}
+
+.button--pin {
+    margin: 0;
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: $color-slider-header;
+    font-weight: normal;
+    border: 1px solid $color-slider-header;
+    &:hover {
+        background-color: white;
+        color: $color-slider-header;
     }
 }

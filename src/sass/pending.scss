@@ -13,6 +13,8 @@
 .section-pending {
     background-color: $color-pending-background; 
     min-height: 416px;
+    border-bottom-left-radius: 50% 40px;
+    border-bottom-right-radius: 50% 40px;
 }
 
 
