@@ -165,7 +165,38 @@ body {
 }
 
 .body-content_bullet {
+  transition: all 0.25s;
   margin-bottom: 20px;
+  line-height: 1.4;
+}
+.body-content_bullet.-indent {
+  position: relative;
+  padding-left: 40px;
+}
+.body-content_bullet .radio-button {
+  transition: all 0.25s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: none;
+}
+.body-content_bullet .radio-button:before {
+  display: none;
+}
+.body-content_bullet .radio-button.-selected {
+  background-color: #19B17C;
+  border: 1px solid #19B17C;
+}
+.body-content_bullet .radio-button.-selected:before {
+  padding-left: 2px;
+  font-size: 14px;
+  padding-top: 1px;
+  color: white;
+  display: block;
 }
 
 .hero__task-details {
@@ -190,6 +221,7 @@ body {
   position: relative;
   text-align: center;
   padding: 25px;
+  display: none;
 }
 
 .main-navigation {
@@ -227,11 +259,20 @@ body {
   margin: 100px auto 120px;
 }
 
-.section-pending {
+.section-pending, .section-accepted, .section-completed {
+  transition: all 0.25s;
   background-color: #FF5E5B;
   min-height: 416px;
   border-bottom-left-radius: 50% 40px;
   border-bottom-right-radius: 50% 40px;
+}
+
+.section-accepted {
+  background-color: #FFBB62;
+}
+
+.section-completed {
+  background-color: #11C194;
 }
 
 input {

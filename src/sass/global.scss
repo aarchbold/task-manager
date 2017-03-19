@@ -33,7 +33,38 @@ body {
     padding: 54px 20px 0;
 }
 .body-content_bullet {
+    transition: all 0.25s;
     margin-bottom: 20px;
+    line-height: 1.4;
+    &.-indent {
+        position: relative;
+        padding-left: 40px;
+    }
+    .radio-button {
+        transition: all 0.25s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 1px solid black;
+        display: none;
+        &:before {
+            display: none;
+        }
+        &.-selected {
+            background-color: $color-selected-button;
+            border: 1px solid $color-selected-button;
+            &:before {
+                padding-left: 2px;
+                font-size: 14px;
+                padding-top: 1px;
+                color: white;
+                display: block;
+            }
+        }
+    }
 }
 
 // start hero styles

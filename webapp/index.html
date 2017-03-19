@@ -60,7 +60,7 @@
             </div>
         </div>
         <div class="page-wrap">
-            <section class="section-pending">
+            <section id="mainSection" class="section-pending">
                 <nav class="main-navigation">
                     <div class="main-navigation__container">
                         <img class="main-navigation__logo" src="static/images/logos/logo-workbert.png" title="Workbert" width="130" />
@@ -78,16 +78,31 @@
                 </div>
             </section>
             <div class="body-content">
-                <p class="body-content_bullet">Needs, Sign up button, place to input email address, or phone number.</p>
-                <p class="body-content_bullet">Make sure to hi-light the press we got (Time, Inc. TC)</p>
-                <p class="body-content_bullet">Show screen shots of the app in action.</p>
-                <p class="body-content_bullet">Nice big hero image.</p>
+                <div class="body-content_bullet">
+                    <div class="radio-button -selected fa fa-check"></div>
+                    Needs, Sign up button, place to input email address, or phone number.
+                </div>
+                <div class="body-content_bullet">
+                    <div class="radio-button fa fa-check"></div>
+                    Make sure to hi-light the press we got (Time, Inc. TC)
+                </div>
+                <div class="body-content_bullet">
+                    <div class="radio-button fa fa-check"></div>
+                    Show screen shots of the app in action.
+                </div>
+                <div class="body-content_bullet">
+                    <div class="radio-button fa fa-check"></div>
+                    Nice big hero image.
+                </div>
             </div>
         </div>
 
         <footer class="main-footer" data-role="footer" data-position="fixed">
-            <div class="main-footer__container">
+            <div class="main-footer__container -pending">
                 <a id="declineTask" class="button" href="#">Decline</a> <a id="acceptTask" class="button" href="#">Accept</a>
+            </div>
+            <div class="main-footer__container -accepted">
+                <a id="updateTask" class="button" href="#">Give Update</a> <a id="finishTask" class="button" href="#">Task is Done</a>
             </div>
         </footer>
 
