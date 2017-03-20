@@ -1,22 +1,23 @@
 // @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic)
 
-$circle-bg: #d6dadc;
-$circle-color: #97a71d;
-$circle-size: 120px;
+$circle-bg: #F2F2F2;
+$circle-color: #11C194;
+$circle-size: 260px;
 $transition-length: 1s;
-$inset-size: 85px;
-$inset-color: #fbfbfb;
-$shadow: 6px 6px 10px rgba(0,0,0,.2);
+$inset-size: 215px;
+$inset-color: white;
 $increment: 180deg/100;
-$percentage-color: #97a71d;
-$percentage-font-size: 22px;
-$percentage-text-width: 44px;
+$percentage-color: #000000;
+$percentage-font-size: 44px;
+$percentage-text-width: 120px;
 
 .progress-radial {
     background-color: $circle-bg;
     width: $circle-size;
     height: $circle-size;
     border-radius: 50%;
+    transform: rotate(180deg);
+    margin: 0 auto;
 }
 
 .circle {
@@ -25,8 +26,6 @@ $percentage-text-width: 44px;
         height: $circle-size;
         position: absolute;
         border-radius: 50%;
-        transition: -webkit-transform $transition-length;
-        transition: -ms-transform $transition-length;
         transition: transform $transition-length;
         -webkit-backface-visibility: hidden;
     }
@@ -45,7 +44,6 @@ $percentage-text-width: 44px;
         height: $circle-size;
         position: absolute;
         border-radius: 50%;
-        box-shadow: $shadow inset;
     }
 }
 
@@ -58,30 +56,46 @@ $percentage-text-width: 44px;
     margin-top: ($circle-size - $inset-size)/2;
     background-color: $inset-color;
     border-radius: 50%;
-    box-shadow: $shadow;
-    .percentage {
-        width: $percentage-text-width;
-        height: $percentage-font-size;
+    transform: rotate(180deg);
+    .completed {
         position: absolute;
-        top: ($inset-size - $percentage-font-size) / 2;
-        left: ($inset-size - $percentage-text-width) / 2;
-        line-height: 1;
-        transition: width $transition-length;
-        overflow: hidden;
-        .numbers {
-            margin-top: -$percentage-font-size;
-            transition: width $transition-length;
-            span {
-                width: $percentage-text-width;
-                display: inline-block;
-                vertical-align: top;
-                text-align: center;
-                font-weight: 800;
-                font-size: $percentage-font-size;
-                font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-                color: $percentage-color;
-            }
-        }
+        top: 133px;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .percentage {
+        position: absolute;
+        top: 74px;
+        width: 100%;
+        text-align: center;
+        font-size: 58px;
+        font-weight: bold;
+        color: $percentage-color;
+    //     width: $percentage-text-width;
+    //     height: $percentage-font-size;
+    //     position: absolute;
+    //     top: ($inset-size - ($percentage-font-size + 15)) / 2;
+    //     left: ($inset-size - $percentage-text-width) / 2;
+    //     line-height: 1;
+    //     transition: width $transition-length;
+    //     overflow: hidden;
+    //     .numbers {
+    //         margin-top: -$percentage-font-size;
+    //         transition: width $transition-length;
+    //         span {
+    //             width: $percentage-text-width;
+    //             display: inline-block;
+    //             vertical-align: top;
+    //             text-align: center;
+    //             font-weight: 800;
+    //             font-size: $percentage-font-size;
+    //             font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    //             color: $percentage-color;
+    //         }
+    //     }
     }
 }
 
@@ -90,8 +104,6 @@ $percentage-text-width: 44px;
         &[data-progress='#{$i}'] {
             .circle {
                 .mask.full, .fill {
-                    -webkit-transform: rotate($increment * $i);
-                    -ms-transform: rotate($increment * $i);
                     transform: rotate($increment * $i);
                 }
             }
