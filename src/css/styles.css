@@ -145,6 +145,9 @@ body {
   height: 100%;
   overflow-x: hidden;
 }
+body.-lock {
+  overflow: hidden;
+}
 
 .page-wrap {
   padding-bottom: 100px;
@@ -310,6 +313,17 @@ button:hover, .button:hover {
   box-sizing: border-box;
 }
 
+.button--completed {
+  border: 2px solid #11C194;
+  background-color: #11C194;
+  color: white;
+}
+.button--completed:hover {
+  border: 2px solid #11C194;
+  background-color: #11C194;
+  color: white;
+}
+
 .button--pin {
   margin: 0;
   padding: 10px;
@@ -345,6 +359,7 @@ button:hover, .button:hover {
   background-color: white;
   z-index: 21;
   right: -370px;
+  overflow: auto;
 }
 .page-slider.-is-open {
   transform: translateX(-370px);
@@ -360,6 +375,19 @@ button:hover, .button:hover {
   text-align: center;
   padding: 0 30px;
   font-size: 14px;
+}
+
+.page-slider__footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 66px;
+  background-color: #EFEFEF;
+}
+.page-slider__footer .page-slider__footer-container {
+  text-align: center;
+  padding: 25px;
 }
 
 .page-slider_heading {
@@ -392,6 +420,33 @@ button:hover, .button:hover {
   text-align: left;
 }
 
-.page-slider--accepted {
+.page-slider--accepted, .page-slider--progress {
+  position: relative;
   display: none;
+}
+.page-slider--accepted h3, .page-slider--progress h3 {
+  font-size: 16px;
+  padding: 17px 40px;
+  font-weight: bold;
+}
+
+.page-slider_close-button {
+  position: absolute;
+  left: 14px;
+  top: 16px;
+  text-decoration: none;
+}
+.page-slider_close-button:hover {
+  text-decoration: none;
+}
+
+.page-slider_nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 50px;
+  background-color: #FFBB62;
 }

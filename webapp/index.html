@@ -17,7 +17,7 @@
         <script src="static/js/vendor/vendors.js"></script>
         <script src="https://use.fontawesome.com/677ce2c38f.js"></script>
     </head>
-    <body id="pending-page">
+    <body id="pending-page" class="-lock">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -57,6 +57,15 @@
                 </div>
             </div>
             <div class="page-slider--progress">
+                <div class="page-slider_nav">
+                    <a class="page-slider_close-button fa fa-times" href="#"></a>
+                    <h3>TASK IN PROGRESS</h3>
+                </div>
+                <div class="page-slider__footer">
+                    <div class="page-slider__footer-container">
+                        <a id="submitButton" class="button" href="#">Submit</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="page-wrap">

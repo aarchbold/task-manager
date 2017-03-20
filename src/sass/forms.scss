@@ -46,6 +46,17 @@ button, .button {
     box-sizing: border-box;
 }
 
+.button--completed {
+    border: 2px solid $color-completed-background;
+    background-color: $color-completed-background;
+    color: white;
+    &:hover {
+        border: 2px solid $color-completed-background;
+        background-color: $color-completed-background;
+        color: white;  
+    }
+}
+
 .button--pin {
     margin: 0;
     padding: 10px;
