@@ -25,6 +25,17 @@ $.fn.handleModal = function(){
     $footerPending = $('.main-footer__container.-pending'),
     $footerAccepted = $('.main-footer__container.-accepted');
 
+    function showRadialProgress() {
+      var transform_styles = ['-webkit-transform','-ms-transform','transform'];
+      
+      window.randomize = function() {
+        $('.progress-radial').attr('data-progress', Math.floor(Math.random() * 100));
+      };
+
+      setTimeout(window.randomize, 200);
+      $('.progress-radial').click(window.randomize);
+    }
+
     function setState(state) {
       if (state === 'accepted') {
         window.workbert.taskState = 'accepted';
@@ -100,6 +111,8 @@ $.fn.handleModal = function(){
 
     // show pending footer
     $footerPending.fadeIn();
+    // set up radial progress bar
+    showRadialProgress();
 }
 
 
