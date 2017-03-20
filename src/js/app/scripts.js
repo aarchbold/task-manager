@@ -26,14 +26,14 @@ $.fn.handleModal = function(){
     $footerAccepted = $('.main-footer__container.-accepted');
 
     function showRadialProgress() {
-      var transform_styles = ['-webkit-transform','-ms-transform','transform'];
+      // var transform_styles = ['-webkit-transform','-ms-transform','transform'];
       
-      window.randomize = function() {
-        $('.progress-radial').attr('data-progress', Math.floor(Math.random() * 100));
-      };
+      // window.randomize = function() {
+      //   $('.progress-radial').attr('data-progress', Math.floor(Math.random() * 100));
+      // };
 
-      setTimeout(window.randomize, 200);
-      $('.progress-radial').click(window.randomize);
+      // setTimeout(window.randomize, 200);
+      // $('.progress-radial').click(window.randomize);
     }
 
     function setState(state) {
