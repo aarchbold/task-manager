@@ -427,6 +427,7 @@ button:hover, .button:hover {
 .page-slider--accepted, .page-slider--progress {
   position: relative;
   display: none;
+  height: 100%;
 }
 .page-slider--accepted h3, .page-slider--progress h3 {
   font-size: 16px;
