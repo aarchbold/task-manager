@@ -1,11 +1,14 @@
 /* eslint-disable */
 // globes
 window.workbert = {
-  taskState: 'pending'
+  taskState: 'pending',
+  tasksDone: 1,
+  tasksTotal: 4,
+  progress: '25%'
 };
 
 // Newsletter Signup Handling
-$.fn.handleModal = function(){
+$.fn.handleModal = function() {
   var context = $(this),
     $sliderPin = $('.page-slider--pin', context),
     $sliderAccepted = $('.page-slider--accepted', context),
@@ -24,17 +27,6 @@ $.fn.handleModal = function(){
     $todos = $('.body-content_bullet'),
     $footerPending = $('.main-footer__container.-pending'),
     $footerAccepted = $('.main-footer__container.-accepted');
-
-    function showRadialProgress() {
-      // var transform_styles = ['-webkit-transform','-ms-transform','transform'];
-      
-      // window.randomize = function() {
-      //   $('.progress-radial').attr('data-progress', Math.floor(Math.random() * 100));
-      // };
-
-      // setTimeout(window.randomize, 200);
-      // $('.progress-radial').click(window.randomize);
-    }
 
     function setState(state) {
       if (state === 'accepted') {
@@ -91,7 +83,9 @@ $.fn.handleModal = function(){
     $closeButton.click(function(e) {
       e.preventDefault();
       $slider.removeClass('-is-open');
-      $overlay.fadeOut();
+      $overlay.fadeOut(400, function() {
+        $sliderUpdate.hide();
+      });
       context.removeClass('-lock');
     })
 
@@ -111,12 +105,55 @@ $.fn.handleModal = function(){
 
     // show pending footer
     $footerPending.fadeIn();
-    // set up radial progress bar
-    showRadialProgress();
 }
 
+$.fn.handleProgress = function() {
+  var context = $(this),
+    $percentage = $('.percentage',context),
+    $increase = $('.page-slider_radial-controls_button.-increase',context),
+    $decrease = $('.page-slider_radial-controls_button.-decrease',context),
+    $progress = $('.progress-radial', context),
+    multiplier = 25;
+
+  console.log(context);
+  console.log($percentage);
+  console.log($increase);
+  console.log($decrease);
+  console.log($progress);
+
+  $increase.click(function(e) {
+    e.preventDefault();
+    var curProgress = $progress.attr('data-progress');
+    var curProgressInt = parseInt(curProgress,10);
+    if (curProgressInt < 100) {
+      curProgressInt = curProgressInt + multiplier;
+      if (curProgressInt > 99) {
+        $progress.attr('data-progress', '100');
+      } else {
+        $progress.attr('data-progress', curProgressInt);
+      }
+      $percentage.html($progress.attr('data-progress') + '%');
+    }
+  })
+  $decrease.click(function(e) {
+    e.preventDefault();
+    var curProgress = $progress.attr('data-progress');
+    var curProgressInt = parseInt(curProgress,10);
+    if (curProgressInt > 0) {
+      curProgressInt = curProgressInt - multiplier;
+      if (curProgressInt < 1) {
+        $progress.attr('data-progress', '0');
+      } else {
+        $progress.attr('data-progress', curProgressInt);
+      }
+      $percentage.html($progress.attr('data-progress') + '%');
+    }
+  })
+
+}
 
 $(function(){
   $('#pending-page').handleModal();
+  $('#radialProgress').handleProgress();
 });
 

@@ -118,3 +118,31 @@
     text-align: center;
     padding: 100px 20px 40px;
 }
+
+.page-slider_radial-controls {
+    position: relative;
+    padding: 0 60px;
+    height: 64px;
+    .page-slider_radial-controls_button {
+        transition: all 0.25s;
+        display: block;
+        width: 56px;
+        height: 56px;
+        border: 5px solid $color-radial-button-ring;
+        border-radius: 50%;
+        color: $color-radial-button-font;
+        text-decoration: none;
+        font-size: 20px;
+        font-size: 50px;
+        text-align: center;
+        float: right;
+        &:first-child {
+            float: left;
+        }
+        &:hover, &:active {
+            border: 5px solid $color-radial-button-hover;
+            color: $color-radial-button-hover;
+            text-decoration: none;
+        }
+    }
+}

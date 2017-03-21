@@ -461,6 +461,34 @@ button:hover, .button:hover {
   padding: 100px 20px 40px;
 }
 
+.page-slider_radial-controls {
+  position: relative;
+  padding: 0 60px;
+  height: 64px;
+}
+.page-slider_radial-controls .page-slider_radial-controls_button {
+  transition: all 0.25s;
+  display: block;
+  width: 56px;
+  height: 56px;
+  border: 5px solid #E4E4E4;
+  border-radius: 50%;
+  color: #979797;
+  text-decoration: none;
+  font-size: 20px;
+  font-size: 50px;
+  text-align: center;
+  float: right;
+}
+.page-slider_radial-controls .page-slider_radial-controls_button:first-child {
+  float: left;
+}
+.page-slider_radial-controls .page-slider_radial-controls_button:hover, .page-slider_radial-controls .page-slider_radial-controls_button:active {
+  border: 5px solid #11C194;
+  color: #11C194;
+  text-decoration: none;
+}
+
 .progress-radial {
   background-color: #F2F2F2;
   width: 260px;
