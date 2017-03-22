@@ -375,6 +375,13 @@ button:hover, .button:hover {
   background-color: #3eaeff;
 }
 
+.page-slider_body {
+  position: absolute;
+  top: 50px;
+  overflow: auto;
+  height: 300px;
+}
+
 .page-slider_content {
   text-align: center;
   padding: 0 30px;
@@ -487,6 +494,41 @@ button:hover, .button:hover {
   border: 5px solid #11C194;
   color: #11C194;
   text-decoration: none;
+}
+
+.page-slider_comments {
+  padding: 50px 20px;
+}
+
+.page-slider_comments--input {
+  border-top: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 20px 0px 20px 0px;
+  margin-bottom: 40px;
+}
+
+.page-slider_textarea {
+  font-size: 16px;
+  border: none;
+  min-height: 100px;
+  width: 100%;
+}
+
+.comment-item {
+  margin-bottom: 50px;
+  line-height: 1.4;
+}
+
+.comment-item_heading {
+  color: black;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.comment-item_text {
+  color: #979797;
+  font-size: 14px;
 }
 
 .progress-radial {

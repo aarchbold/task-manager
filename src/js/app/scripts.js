@@ -152,8 +152,52 @@ $.fn.handleProgress = function() {
 
 }
 
+$.fn.handleComments = function() {
+  var context = $(this),
+    $commentBox = $('.page-slider_textarea', context),
+    $comments = $('.comment-item_list', context);
+
+  console.log(context);
+  console.log($commentBox);
+  console.log($comments);
+
+  function submitComment() {
+    var comment = $commentBox.val();
+    // TODO: call endpoint
+    $comments.prepend('<div class="comment-item"><div class="comment-item_heading">Sent: Just now</div><div class="comment-item_text">' + comment + '</div></div>');
+    $commentBox.val('');
+  }
+
+  $commentBox.keyup(function(e) {
+    if ((e.keyCode || e.which) === 13) {
+      submitComment();
+    }
+  })
+
+ // var code = e.keyCode || e.which;
+ // if(code == 13) { //Enter keycode
+ //   //Do something
+ // }
+
+}
+
+function resizeSlider() {
+  var windowHeight = $(window).height(),
+    $sliderBody = $('.page-slider_body'),
+    offset = 116;
+
+  console.log('resize me');
+  console.log(windowHeight);
+  $sliderBody.height(windowHeight - offset);
+}
+
 $(function(){
   $('#pending-page').handleModal();
   $('#radialProgress').handleProgress();
+  $('#sliderComments').handleComments();
+  resizeSlider();
 });
+
+
+window.addEventListener('resize', resizeSlider);
 
