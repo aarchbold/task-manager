@@ -93,6 +93,8 @@ $.fn.handleModal = function() {
 
     $acceptButton.click(function(e) {
       e.preventDefault();
+      // scroll to the top to avoid scrolly issues
+      window.scrollTo(0,0);
       $sliderPin.hide();
       $sliderAccepted.show();
       $slider.addClass('-is-open');
@@ -102,6 +104,8 @@ $.fn.handleModal = function() {
 
     $updateButton.click(function(e) {
       e.preventDefault();
+      // scroll to the top to avoid scrolly issues
+      window.scrollTo(0,0);
       $sliderPin.hide();
       $sliderAccepted.hide();
       $sliderUpdate.show();
