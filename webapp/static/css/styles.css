@@ -308,6 +308,11 @@ input {
   box-sizing: border-box;
   margin-bottom: 10px;
 }
+@media (max-width: 764px) {
+  input {
+    font-size: 16px;
+  }
+}
 
 button, .button {
   transition: all 0.250s;
@@ -464,6 +469,12 @@ button:hover, .button:hover {
   padding: 0px 30px 30px;
   text-align: center;
   font-size: 14px;
+}
+@media (max-width: 764px) {
+  .page-slider_footer {
+    position: relative;
+    padding-top: 30px;
+  }
 }
 
 .page-slider_footer--text {

@@ -15,6 +15,9 @@ input {
     &:focus {
         // outline-color: $color-form-highlight;
     }
+    @media (max-width: $breakpoint-slider) {
+        font-size: 16px;
+    }
 }
 
 // buttons

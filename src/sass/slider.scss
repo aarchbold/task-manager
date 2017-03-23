@@ -97,6 +97,10 @@
     padding: 0px 30px 30px;
     text-align: center;
     font-size: 14px;
+    @media (max-width: $breakpoint-slider) {
+        position: relative;
+        padding-top: 30px;
+    }
 }
 
 .page-slider_footer--text {
