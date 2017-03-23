@@ -7,7 +7,35 @@ window.workbert = {
   progress: '25%'
 };
 
-// Newsletter Signup Handling
+// resizes the slider based on window height
+function resizeSlider() {
+  var windowHeight = $(window).height(),
+    $sliderBody = $('.page-slider_body'),
+    offset = 116;
+
+  console.log('resize me');
+  console.log(windowHeight);
+  $sliderBody.height(windowHeight - offset);
+}
+
+// handles the task progress on the main page
+function handleTaskProgress() {
+  var context = $('.hero__task-details'),
+    $heroPending = $('.-task-pending',context),
+    $heroAccepted = $('.-task-accepted',context),
+    $progress = $('.hero__task-details--progress',context);
+  if (window.workbert.taskState === 'pending') {
+    // show pending state
+    $heroAccepted.hide();
+    $heroPending.show();
+  } else {
+    // show other state
+    $heroAccepted.show();
+    $heroPending.hide();
+  }
+}
+
+// Handle the modal states
 $.fn.handleModal = function() {
   var context = $(this),
     $sliderPin = $('.page-slider--pin', context),
@@ -31,6 +59,7 @@ $.fn.handleModal = function() {
     function setState(state) {
       if (state === 'accepted') {
         window.workbert.taskState = 'accepted';
+        handleTaskProgress();
         $mainSection.addClass('section-accepted');
         $mainSection.removeClass('section-pending');
         $todos.each(function(i,e){
@@ -43,6 +72,7 @@ $.fn.handleModal = function() {
         $taskHeading.html('TASK IN PROGRESS');
       } else if (state === 'completed') {
         window.workbert.taskState = 'completed';
+        handleTaskProgress();
         $mainSection.addClass('section-completed');
         $mainSection.removeClass('section-accepted');
         $doneButton.addClass('button--completed');
@@ -107,7 +137,7 @@ $.fn.handleModal = function() {
     $footerPending.fadeIn();
 }
 
-$.fn.handleProgress = function() {
+$.fn.handleSliderProgress = function() {
   var context = $(this),
     $percentage = $('.percentage',context),
     $increase = $('.page-slider_radial-controls_button.-increase',context),
@@ -174,28 +204,14 @@ $.fn.handleComments = function() {
     }
   })
 
- // var code = e.keyCode || e.which;
- // if(code == 13) { //Enter keycode
- //   //Do something
- // }
-
-}
-
-function resizeSlider() {
-  var windowHeight = $(window).height(),
-    $sliderBody = $('.page-slider_body'),
-    offset = 116;
-
-  console.log('resize me');
-  console.log(windowHeight);
-  $sliderBody.height(windowHeight - offset);
 }
 
 $(function(){
   $('#pending-page').handleModal();
-  $('#radialProgress').handleProgress();
+  $('#radialProgress').handleSliderProgress();
   $('#sliderComments').handleComments();
   resizeSlider();
+  handleTaskProgress();
 });
 
 

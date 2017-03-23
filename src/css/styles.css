@@ -206,10 +206,29 @@ body.-lock {
   text-align: center;
   margin-bottom: 30px;
   font-weight: bold;
+  color: white;
 }
 
 .hero__task-from {
   opacity: 0.7;
+}
+
+.-task-pending .-task-accepted {
+  display: none;
+}
+
+.hero__task-details--meter {
+  transition: all 0.25s;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: black;
+  opacity: 0.6;
+}
+.hero__task-details--meter.-filled {
+  background-color: white;
+  opacity: 1;
 }
 
 .main-footer {
@@ -364,6 +383,24 @@ button:hover, .button:hover {
 .page-slider.-is-open {
   transform: translateX(-370px);
 }
+@media (max-width: 764px) {
+  .page-slider.-is-open {
+    transform: translateX(0px);
+    display: block;
+  }
+}
+@media (max-width: 764px) {
+  .page-slider {
+    right: auto;
+    left: auto;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    border-radius: 6px;
+    display: none;
+  }
+}
 
 .page-slider_header {
   width: 100%;
@@ -376,6 +413,7 @@ button:hover, .button:hover {
   top: 50px;
   overflow: auto;
   height: 300px;
+  width: 100%;
 }
 
 .page-slider_content {
@@ -431,6 +469,7 @@ button:hover, .button:hover {
   position: relative;
   display: none;
   height: 100%;
+  overflow: hidden;
 }
 .page-slider--accepted h3, .page-slider--progress h3 {
   font-size: 16px;
@@ -534,6 +573,7 @@ button:hover, .button:hover {
   border-radius: 50%;
   transform: rotate(180deg);
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .circle .mask, .circle .fill {

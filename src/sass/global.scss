@@ -76,9 +76,27 @@ body {
     text-align: center;
     margin-bottom: 30px;
     font-weight: bold;
+    color: white;
 }
 .hero__task-profle {}
 .hero__task-from {
     opacity: 0.7;
 }
+.-task-pending .-task-accepted {
+    display: none;
+}
+.hero__task-details--meter {
+    transition: all 0.25s;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0.6;
+    &.-filled {
+        background-color: white;
+        opacity: 1;
+    }
+}
+
 // end hero styles
