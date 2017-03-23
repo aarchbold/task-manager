@@ -48,13 +48,14 @@ $.fn.handleModal = function() {
     $doneButton = $('#finishTask', context),
     $closeButton = $('.page-slider_close-button', context),
     $updateButton = $('#updateTask', context),
-    $overlay = $('.page-overlay'),
-    $slider = $('.page-slider'),
-    $mainSection = $('#mainSection'),
-    $taskHeading = $('.main-navigation__header'),
-    $todos = $('.body-content_bullet'),
-    $footerPending = $('.main-footer__container.-pending'),
-    $footerAccepted = $('.main-footer__container.-accepted');
+    $overlay = $('.page-overlay', context),
+    $slider = $('.page-slider', context),
+    $mainSection = $('#mainSection', context),
+    $taskHeading = $('.main-navigation__header', context),
+    $todos = $('.body-content_bullet', context),
+    $mainFooter = $('footer', context),
+    $footerPending = $('.main-footer__container.-pending', context),
+    $footerAccepted = $('.main-footer__container.-accepted', context);
 
     function setState(state) {
       if (state === 'accepted') {
@@ -95,6 +96,7 @@ $.fn.handleModal = function() {
       e.preventDefault();
       // scroll to the top to avoid scrolly issues
       window.scrollTo(0,0);
+      $mainFooter.hide();
       $sliderPin.hide();
       $sliderAccepted.show();
       $slider.addClass('-is-open');
@@ -106,6 +108,7 @@ $.fn.handleModal = function() {
       e.preventDefault();
       // scroll to the top to avoid scrolly issues
       window.scrollTo(0,0);
+      $mainFooter.hide();
       $sliderPin.hide();
       $sliderAccepted.hide();
       $sliderUpdate.show();
@@ -117,6 +120,7 @@ $.fn.handleModal = function() {
 
     $closeButton.click(function(e) {
       e.preventDefault();
+      $mainFooter.show();
       $slider.removeClass('-is-open');
       $sliderUpdate.hide();
       $overlay.fadeOut();
@@ -125,6 +129,7 @@ $.fn.handleModal = function() {
 
     $acceptedButton.click(function(e) {
       e.preventDefault();
+      $mainFooter.show();
       // TODO: make call to endpoint
       setState('accepted');
       $slider.removeClass('-is-open');
