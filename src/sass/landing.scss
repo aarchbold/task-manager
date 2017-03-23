@@ -14,8 +14,8 @@
     transition: all 0.25s;
     background-color: $color-pending-background; 
     min-height: 416px;
-    border-bottom-left-radius: 50% 40px;
-    border-bottom-right-radius: 50% 40px;
+    // border-bottom-left-radius: 50% 40px;
+    // border-bottom-right-radius: 50% 40px;
 }
 .section-accepted {
     background-color: $color-accepted-background; 

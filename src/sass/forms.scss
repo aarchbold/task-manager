@@ -41,6 +41,10 @@ button, .button {
     &:focus {
         // outline-color: $color-form-highlight;
     }
+    @media (max-width: $breakpoint-slider) {
+        margin: 0 5px;
+        padding: 4px 20px;
+    }
 }
 
 .button--block {
@@ -71,5 +75,30 @@ button, .button {
     &:hover {
         background-color: white;
         color: $color-slider-header;
+    }
+}
+.button--give-update {
+    background-color: $color-pending-background;
+    border-color: $color-pending-background;
+    color: white;
+    &:hover {
+        color: $color-pending-background;
+    }
+}
+.button--get-app {
+    position: absolute;
+    right: 10px;
+    top: 22px;
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    padding: 4px 14px;
+    &:hover {
+        background-color: transparent;
+        color: white;
+        border-color: white;
+    }
+    @media (min-width: $breakpoint-tablet) {
+        display: none !important;
     }
 }

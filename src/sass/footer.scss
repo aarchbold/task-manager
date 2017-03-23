@@ -12,5 +12,8 @@
         text-align: center;
         padding: 25px;
         display: none;
+        @media (max-width: $breakpoint-slider) {
+            padding: 25px 0;
+        }
     }
 }

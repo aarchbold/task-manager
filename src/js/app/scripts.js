@@ -109,6 +109,7 @@ $.fn.handleModal = function() {
       $sliderPin.hide();
       $sliderAccepted.hide();
       $sliderUpdate.show();
+      $sliderUpdate.show();
       $slider.addClass('-is-open');
       $overlay.fadeIn();
       context.addClass('-lock');
@@ -117,9 +118,8 @@ $.fn.handleModal = function() {
     $closeButton.click(function(e) {
       e.preventDefault();
       $slider.removeClass('-is-open');
-      $overlay.fadeOut(400, function() {
-        $sliderUpdate.hide();
-      });
+      $sliderUpdate.hide();
+      $overlay.fadeOut();
       context.removeClass('-lock');
     })
 

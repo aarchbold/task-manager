@@ -26,34 +26,34 @@
         <div class="page-slider -is-open">
             <div class="page-slider--pin">
                 <div class="page-slider_header">
-                    <img src="static/images/ui/slider-enter-pin.png" width="370" />
-                    <div class="page-slider_content">
-                        <h2 class="page-slider_heading">Huuzzaaaa!</h2>
-                        <p class="page-slider_subheading ">You've been sent a new task!! enter the 4 digit pin to unlock the task.</p>
-                        <div class="page-slider_form" id="pin-entry">
-                            <input class="page-slider_input pin-input" type="number" placeholder="Enter PIN Here" max="9999" />
-                            <button id="pinSubmit" class="button button--pin button--block" type="button">Submit PIN</button>
-                        </div>
-                        <div class="page-slider_instructions">The pin shoud be in the message that was sent to you</div>
+                    <img src="static/images/ui/slider-enter-pin.png" />
+                </div>
+                <div class="page-slider_content">
+                    <h2 class="page-slider_heading">Welcome to Ellroi... Huuzzzaa!</h2>
+                    <p class="page-slider_subheading ">You've been sent a new task!! enter the 4 digit pin to unlock the task.</p>
+                    <div class="page-slider_form" id="pin-entry">
+                        <input class="page-slider_input pin-input" type="number" placeholder="Enter PIN Here" max="9999" />
+                        <button id="pinSubmit" class="button button--pin button--block" type="button">Submit PIN</button>
                     </div>
-                    <div class="page-slider_footer">
-                        <p class="page-slider_footer--text">We have an iPhone app too if you want to unlock the best way to get work done for free.</p>
-                        <a href="#"><img class="page-slider__button" src="static/images/logos/logo-appstore.png" title="Download on the App Store" width="110" /></a>
-                    </div>
+                    <div class="page-slider_instructions">The pin shoud be in the message that was sent to you</div>
+                </div>
+                <div class="page-slider_footer">
+                    <p class="page-slider_footer--text">We have an iPhone app too if you want to unlock the best way to get work done for free.</p>
+                    <a href="#"><img class="page-slider__button" src="static/images/logos/logo-appstore.png" title="Download on the App Store" width="110" /></a>
                 </div>
             </div>
             <div class="page-slider--accepted">
                 <div class="page-slider_header">
-                    <img src="static/images/ui/slider-accepted.png" width="370" />
-                    <div class="page-slider_content">
-                        <h2 class="page-slider_heading">Favorite this page!</h2>
-                        <p class="page-slider_subheading ">Add this page as a favorite so you can easily find it when you need to reference or check off completed tasks. (You can also give updates any time too)</p>
-                        <a href="#" id="taskAccepted" class="button button--pin button--block">Thanks, close this now</a>
-                    </div>
-                    <div class="page-slider_footer">
-                        <p class="page-slider_footer--text">We have an iPhone app too if you want to unlock the best way to get work done for free.</p>
-                        <a href="#"><img class="page-slider__button" src="static/images/logos/logo-appstore.png" title="Download on the App Store" width="110" /></a>
-                    </div>
+                    <img src="static/images/ui/slider-accepted.png" />
+                </div>
+                <div class="page-slider_content">
+                    <h2 class="page-slider_heading">Favorite this page!</h2>
+                    <p class="page-slider_subheading ">Add this page as a favorite so you can easily find it when you need to reference or check off completed tasks. (You can also give updates any time too)</p>
+                    <a href="#" id="taskAccepted" class="button button--pin button--block">Thanks, close this now</a>
+                </div>
+                <div class="page-slider_footer">
+                    <p class="page-slider_footer--text">We have an iPhone app too if you want to unlock the best way to get work done for free.</p>
+                    <a href="#"><img class="page-slider__button" src="static/images/logos/logo-appstore.png" title="Download on the App Store" width="110" /></a>
                 </div>
             </div>
             <div class="page-slider--progress">
@@ -127,9 +127,10 @@
             <section id="mainSection" class="section-pending">
                 <nav class="main-navigation">
                     <div class="main-navigation__container">
-                        <img class="main-navigation__logo" src="static/images/logos/logo-workbert.png" title="Workbert" width="130" />
+                        <img class="main-navigation__logo" src="static/images/logos/logo-ellroi.png" title="Ellroi" width="120" />
                         <h1 class="main-navigation__header">NEW TASK PENDING</h1>
-                        <a href="#"><img class="main-navigation__button" src="static/images/logos/logo-appstore.png" title="Download on the App Store" width="110" /></a>
+                        <a href="#" class="button button--get-app">Get App</a>
+                        <a href="#" class="main-navigation__button--link"><img class="main-navigation__button" src="static/images/logos/logo-appstore.png" title="Download on the App Store" width="110" /></a>
                     </div>
                 </nav>
                 <div class="hero-content">
@@ -173,7 +174,7 @@
                 <a id="declineTask" class="button" href="#">Decline</a> <a id="acceptTask" class="button" href="#">Accept</a>
             </div>
             <div class="main-footer__container -accepted">
-                <a id="updateTask" class="button" href="#">Give Update</a> <a id="finishTask" class="button" href="#">Task is Done</a>
+                <a id="updateTask" class="button button--give-update" href="#">Give Update</a> <a id="finishTask" class="button" href="#">Task is Done</a>
             </div>
         </footer>
 
