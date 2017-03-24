@@ -135,6 +135,10 @@ ul {
 html {
   height: 100%;
 }
+html.-lock {
+  overflow: hidden;
+  position: fixed;
+}
 
 body {
   transition: -webkit-transform 0.25s;
@@ -144,10 +148,10 @@ body {
   font-family: "San Francisco", "Arial", "San-Serif";
   font-size: 16px;
   height: 100%;
-  overflow-x: hidden;
 }
 body.-lock {
   overflow: hidden;
+  position: fixed;
 }
 
 .page-wrap {
@@ -238,6 +242,7 @@ body.-lock {
   width: 100%;
   background-color: #EFEFEF;
   height: 66px;
+  display: none;
 }
 .main-footer .main-footer__container {
   position: relative;

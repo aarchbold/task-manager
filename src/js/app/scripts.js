@@ -89,6 +89,8 @@ $.fn.handleModal = function() {
       $input.val('');
       $slider.removeClass('-is-open');
       $overlay.fadeOut();
+      $mainFooter.show();
+      $footerPending.fadeIn();
       context.removeClass('-lock');
     })
 
@@ -143,7 +145,7 @@ $.fn.handleModal = function() {
     })
 
     // show pending footer
-    $footerPending.fadeIn();
+    // $footerPending.fadeIn();
 }
 
 $.fn.handleSliderProgress = function() {

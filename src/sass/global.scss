@@ -2,6 +2,10 @@
 
 html {
     height: 100%;
+    &.-lock {
+        overflow: hidden;
+        position: fixed;
+    }
 }
 
 body {
@@ -11,9 +15,10 @@ body {
     font-family: "San Francisco", "Arial", "San-Serif";
     font-size: 16px;
     height: 100%;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     &.-lock {
         overflow: hidden;
+        position: fixed;
     }
 }
 
