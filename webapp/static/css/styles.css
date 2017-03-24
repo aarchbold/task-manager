@@ -147,7 +147,11 @@ body {
 }
 body.-lock {
   overflow: hidden;
-  position: fixed;
+}
+@media (max-width: 550px) {
+  body.-lock {
+    position: fixed;
+  }
 }
 
 .page-wrap {

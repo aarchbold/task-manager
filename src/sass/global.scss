@@ -14,7 +14,9 @@ body {
     // overflow-x: hidden;
     &.-lock {
         overflow: hidden;
-        position: fixed;
+        @media (max-width: $breakpoint-tablet) {
+            position: fixed;
+        }
     }
 }
 
