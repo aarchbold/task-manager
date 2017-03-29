@@ -24,18 +24,20 @@
         <div class="page-overlay">
         </div>
         <div class="page-slider -is-open">
+            <div class="throbber-full"></div>
             <div class="page-slider--pin">
                 <div class="page-slider_header">
                     <img src="static/images/ui/slider-enter-pin.png" />
                 </div>
                 <div class="page-slider_content">
                     <h2 class="page-slider_heading">Welcome to Ellroi... Huuzzzaa!</h2>
-                    <p class="page-slider_subheading ">You've been sent a new task!! enter the 4 digit pin to unlock the task.</p>
+                    <p class="page-slider_subheading ">You've been sent a new task!! Enter your info and get started.</p>
                     <div class="page-slider_form" id="pin-entry">
-                        <input class="page-slider_input pin-input" type="number" placeholder="Enter PIN Here" max="9999" />
-                        <button id="pinSubmit" class="button button--pin button--block" type="button">Submit PIN</button>
+                        <input id="ellroiFullName" class="page-slider_input" type="text" placeholder="Full Name" max-length="256" autocomplete="false" />
+                        <input id="ellroiJobTitle" class="page-slider_input" type="text" placeholder="Job Title" max-length="256" autocomplete="false" />
+                        <input id="ellroiPassword" class="page-slider_input" type="password" placeholder="Password" max-length="256" autocomplete="false" />
+                        <button id="joinEllroi" class="button button--join button--block" type="button">Join Ellroi</button>
                     </div>
-                    <div class="page-slider_instructions">The pin shoud be in the message that was sent to you</div>
                 </div>
                 <div class="page-slider_footer">
                     <p class="page-slider_footer--text">We have an iPhone app too if you want to unlock the best way to get work done for free.</p>
@@ -49,7 +51,7 @@
                 <div class="page-slider_content">
                     <h2 class="page-slider_heading">Favorite this page!</h2>
                     <p class="page-slider_subheading ">Add this page as a favorite so you can easily find it when you need to reference or check off completed tasks. (You can also give updates any time too)</p>
-                    <a href="#" id="taskAccepted" class="button button--pin button--block">Thanks, close this now</a>
+                    <a href="#" id="taskAccepted" class="button button--join button--block">Thanks, close this now</a>
                 </div>
                 <div class="page-slider_footer">
                     <p class="page-slider_footer--text">We have an iPhone app too if you want to unlock the best way to get work done for free.</p>

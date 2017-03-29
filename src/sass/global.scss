@@ -20,6 +20,17 @@ body {
     }
 }
 
+.throbber-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: white url(../images/ui/ajax-loader.gif) 50% 50% no-repeat;
+    z-index: 100;
+    display: none;
+}
+
 .page-wrap {
     // min-height: 100%;
     // margin-bottom: -66px;

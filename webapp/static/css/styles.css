@@ -154,6 +154,17 @@ body.-lock {
   }
 }
 
+.throbber-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: white url(../images/ui/ajax-loader.gif) 50% 50% no-repeat;
+  z-index: 100;
+  display: none;
+}
+
 .page-wrap {
   padding-bottom: 100px;
   overflow: auto;
@@ -380,7 +391,7 @@ button:hover, .button:hover {
   color: white;
 }
 
-.button--pin {
+.button--join {
   margin: 0;
   padding: 10px;
   border: none;
@@ -389,7 +400,7 @@ button:hover, .button:hover {
   font-weight: normal;
   border: 1px solid #3EAEFF;
 }
-.button--pin:hover {
+.button--join:hover {
   background-color: white;
   color: #3EAEFF;
 }
@@ -477,10 +488,36 @@ button:hover, .button:hover {
   width: 100%;
   background-color: #3eaeff;
 }
+@media (max-width: 375px) {
+  .page-slider_header {
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+  }
+}
+@media (max-width: 320px) {
+  .page-slider_header {
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+  }
+}
 .page-slider_header img {
   display: block;
   max-width: 370px;
   width: 100%;
+}
+@media (max-width: 375px) {
+  .page-slider_header img {
+    position: absolute;
+    top: -23px;
+  }
+}
+@media (max-width: 320px) {
+  .page-slider_header img {
+    position: absolute;
+    top: -53px;
+  }
 }
 
 .page-slider_body {
@@ -540,7 +577,7 @@ button:hover, .button:hover {
     padding-top: 30px;
   }
 }
-@media (max-width: 442px) {
+@media (max-width: 375px) {
   .page-slider_footer {
     display: none;
   }

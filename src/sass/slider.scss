@@ -44,10 +44,29 @@
 .page-slider_header {
     width: 100%;
     background-color: $color-slider-background;
+    // $breakpoint-small-phone: 442px;
+    @media (max-width: $breakpoint-small-phone) {
+        position: relative;
+        height: 160px;
+        overflow: hidden;
+    }
+    @media (max-width: $breakpoint-really-small-phone) {
+        position: relative;
+        height: 100px;
+        overflow: hidden;
+    }
     img {
         display: block;
         max-width: 370px;
         width: 100%;
+        @media (max-width: $breakpoint-small-phone) {
+            position: absolute;
+            top: -23px;
+        }
+        @media (max-width: $breakpoint-really-small-phone) {
+            position: absolute;
+            top: -53px;
+        }
     }
 }
 

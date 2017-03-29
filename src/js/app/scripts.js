@@ -41,8 +41,10 @@ $.fn.handleModal = function() {
     $sliderPin = $('.page-slider--pin', context),
     $sliderAccepted = $('.page-slider--accepted', context),
     $sliderUpdate = $('.page-slider--progress', context),
-    $input = $('.pin-input', context),
-    $pinButton = $('#pinSubmit', context),
+    $inputName = $('#ellroiFullName', context),
+    $inputJob = $('#ellroiJobTitle', context),
+    $inputPassword = $('#ellroiPassword', context),
+    $joinButton = $('#joinEllroi', context),
     $acceptedButton = $('#taskAccepted', context),
     $acceptButton = $('#acceptTask', context),
     $doneButton = $('#finishTask', context),
@@ -56,6 +58,7 @@ $.fn.handleModal = function() {
     $mainFooter = $('footer', context),
     $footerPending = $('.main-footer__container.-pending', context),
     $footerAccepted = $('.main-footer__container.-accepted', context);
+    $throbber = $('.throbber-full', context)
 
     function setState(state) {
       if (state === 'accepted') {
@@ -83,15 +86,22 @@ $.fn.handleModal = function() {
       }
     }
 
-    $pinButton.click(function(e) {
+    $joinButton.click(function(e) {
       e.preventDefault();
       // TODO: make call to endpoint
-      $input.val('');
-      $slider.removeClass('-is-open');
-      $overlay.fadeOut();
-      $mainFooter.show();
-      $footerPending.fadeIn();
-      context.removeClass('-lock');
+      $throbber.fadeIn();
+      // when successfull, clear fields and close slider
+      window.setTimeout(function () {
+        $inputName.val('');
+        $inputJob.val('');
+        $inputPassword.val('');
+        $throbber.fadeOut();
+        $slider.removeClass('-is-open');
+        $overlay.fadeOut();
+        $mainFooter.show();
+        $footerPending.fadeIn();
+        context.removeClass('-lock');
+      }, 2000);
     })
 
     $acceptButton.click(function(e) {
